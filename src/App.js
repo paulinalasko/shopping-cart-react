@@ -46,6 +46,7 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <NavBar className='nav-bar sticky-top' cartItems={cartItems} />
+        <Home />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/products/newarrivals" element={<NewArrivalsPage newProducts={newProducts} onAdd={onAdd} onRemove={onRemove} />} />
