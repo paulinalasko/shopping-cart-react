@@ -9,5 +9,11 @@ Higher ground is a mock-up website of an outdoor related shop that sells many pr
 -Bootstrap\
 -HTML5
 
+## Features: 
+-Browse through products on different pages\
+-Add products to shopping cart\
+-Customize quantity after adding to cart if you want to increase or decrease the amount
+-Practice with Bootstrap styling
+
 ## Credits
 This project is for personal use only. I do not own any of the rights for the assets used in this project. All the image credits can be found [here](https://github.com/paulinalasko/shopping-cart-react/blob/main/credits.md).
