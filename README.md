@@ -2,7 +2,7 @@
 
 Higher ground is a mock-up website of an outdoor related shop that sells many products suited for your outdoor needs. This project was created following the Odin Project course to practice using different elements of React to solidify basic concepts.
 
-[Live Demo]("http://paulinalasko.github.io/shopping-cart-react")
+[Live Demo](http://paulinalasko.github.io/shopping-cart-react)
 
 ## Built with:
 -React + React Router\
