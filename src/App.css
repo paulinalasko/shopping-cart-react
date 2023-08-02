@@ -1,38 +1,484 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+:root {
+  --logo-font: 'Expletus Sans', cursive;
+  --website-font: 'Karla', sans-serif;
+
+  --box-shadow: 0 0 5px grey;
+  --beige-color: #FBFBF9;
+  --footer-color: #d4e1ff;
+  --quote-bgd-color-light: rgb(223, 245, 248, 0.3);
+  --quote-bgd-color-dark: rgb(0, 0, 0, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--website-font);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.column {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-row {
+  position: relative;
+  margin-top: -10px;
+  grid-column: 1/4;
+  grid-row: 2;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  width: 100%;
+}
+
+.nav-bar {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+  padding: 12px;
+  background: linear-gradient(-45deg, #ee7752, #f78ab4, #a023d5, #23bad5);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  position: relative;
+}
+
+.link {
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+.logo {
+  font-family: var(--logo-font);
+  font-size: 30px;
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+/* Home page css */
+.quote {
+  margin-top: 15px;
+  margin-right: auto;
+  padding: 20px;
+  background-color: var(--quote-bgd-color-light);
+  height: 115px;
+  border-radius: 10px;
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 40px;
+  left: 170px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--quote-bgd-color-dark);
+  padding: 20px;
+  border-radius: 10px;
+  height: 105px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.push-right {
+  position: absolute;
+  right: -380px;
+  top: 20px;
+}
+
+.standard-btn {
+  border-radius: 50px;
+  width: 120px;
+  height: 40px;
+  border: none;
+  box-shadow: var(--box-shadow);
+  font-size: 16px;
+}
+
+.bottom-content {
+  position: absolute;
+  bottom: -330px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+  margin-left: -25px;
+}
+
+.image-container {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.image {
+  width: 370px;
+  height: 280px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+  filter: brightness(70%);
+}
+
+.image-text-one,
+.image-text-two,
+.image-text-three,
+.image-text-four {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.image-text-one {
+  top: 110px;
+  left: 110px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.image-text-two {
+  top: 110px;
+  left: 510px;
+}
+
+.image-text-three {
+  top: 110px;
+  left: 880px;
+}
+
+.image-text-four {
+  top: 110px;
+  left: 1190px;
+}
+
+.button-one {
+  position: absolute;
+  top: 160px;
+  left: 135px;
+}
+
+.button-two {
+  position: absolute;
+  top: 160px;
+  left: 530px;
+}
+
+.button-three {
+  position: absolute;
+  top: 160px;
+  left: 920px;
+}
+
+.button-four {
+  position: absolute;
+  top: 160px;
+  left: 1300px;
+}
+
+/* Bottom-hero css */
+
+.bottom-content-two {
+  position: absolute;
+  top: 800px;
+  display: flex;
+  justify-content: center;
+  margin-left: -10px;
+  width: 90%;
+  background-color: rgb(0, 0, 0, 0.1);
+  border-radius: 2px;
+  color: var(--beige-color);
+}
+
+.bottom-hero-image {
+  width: 1000px;
+  height: 700px;
+  border-radius: 10px;
+  filter: brightness(70%);
+  position: relative;
+}
+
+.bottom-hero-text {
+  position: absolute;
+  top: 50px;
+  left: 150px;
+  font-size: 50px;
+}
+
+.smaller-hero-text {
+  font-size: 18px;
+  position: relative;
+}
+
+.spacing-animation {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.bottom-content-two>button {
+  position: absolute;
+  top: 380px;
+  left: 400px;
+  border-radius: 50px;
+  width: 200px;
+  height: 40px;
+  border: none;
+  box-shadow: var(--box-shadow);
+  font-size: 16px;
+}
+
+/* Product pages css */
+
+.sidebar {
+  grid-column: 1/2;
+  background-color: var(--beige-color);
+  border-right: dotted 1px rgb(227, 226, 226);
+  height: 200vh;
+  width: 30vw;
+  padding: 20px;
+  margin-left: -20px;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.sidebar-header {
+  font-style: var(--logo-font);
+  font-size: 28px;
+}
+
+.sidebar-text {
+  font-size: 18px;
+}
+
+.middle-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: -20px;
+  height: 420px;
+  position: relative;
+}
+
+.product-header-text {
+  position: absolute;
+  top: 170px;
+  left: 360px;
+  font-size: 40px;
+}
+
+.product-container {
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: row;
+  gap: -15px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin-top: 220px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image,
+.product-image-thin,
+.product-image-resize,
+.product-image-shorter {
+  border-radius: 10px;
+  background-color: var(--beige-color);
+  margin-bottom: 15px;
+  border: 1px solid var(--beige-color);
+}
+
+.product-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+.product-image {
+  width: 230px;
+  height: 240px;
+}
+
+.product-image-shorter {
+  width: 230px;
+  height: 200px;
+}
+
+.product-image-thin {
+  width: 100px;
+  height: 240px;
+  margin-left: 60px;
+}
+
+.product-image-resize {
+  width: 230px;
+  height: 130px;
+  margin-top: 60px;
+}
+
+/* Footer css */
+
+.footer {
+  position: absolute;
+  top: 1530px;
+  left: -60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.more-info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 210px;
+  gap: 40px;
+}
+
+.more-info-header {
+  margin-bottom: -20px;
+}
+
+.more-info-left,
+.more-info-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+}
+
+.newsletter-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+form>input {
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid black;
+  height: 20px;
+  width: 200px;
+}
+
+.footer-btn,
+.footer-btn-longer {
+  border-radius: 50px;
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-btn-longer {
+  width: 100px;
+}
+
+.copyright-text {
+  position: absolute;
+  top: 1820px;
+  left: -10px;
+  padding: 10px;
+  background-color: var(--footer-color);
+  width: 100%;
+  text-align: center;
+}
+
+/* Pseudo-classes */
+
+.bottom-text>button:hover,
+.link:hover,
+.scale:hover, .click-btn:hover {
+  transform: scale(1.05);
+}
+
+.logo:hover {
+  color: whitesmoke;
+}
+
+.image:hover {
+  filter: brightness(100%);
+}
+
+.product-image:hover,
+.product-image-thin:hover,
+.product-image-resize:hover,
+.product-image-shorter:hover {
+  filter: brightness(95%);
+}
+
+.bottom-content-two:hover {
+  letter-spacing: 1.2px;
+}
+
+.click-btn:active {
+  transform: translateY(4px);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }

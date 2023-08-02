@@ -1,23 +1,59 @@
-import logo from './logo.svg';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import './App.css';
+import NavBar from './components/Navbar';
+import Home from './pages/Home';
+import NewArrivalsPage from '../src/pages/NewArrivalsPage';
+import HikingPage from './pages/HikingPage';
+import CampingPage from './pages/CampingPage';
+import ShoppingCart from './pages/ShoppingCart';
+import newData from './data/newData';
+import hikingData from './data/hikingData';
+import campingData from './data/campingData';
+import { useState } from 'react';
 
-function App() {
+const App = () => {
+  const { newProducts } = newData;
+  const { hikingProducts } = hikingData;
+  const { campingProducts } = campingData
+  const [cartItems, setCartItems] = useState([]);
+
+  const onAdd = (product) => {
+    const exist = cartItems.find(x => x.id === product.id);
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, qty: 1 }]);
+    }
+  };
+
+  const onRemove = (product) => {
+    const exist = cartItems.find(x => x.id === product.id);
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavBar className='nav-bar sticky-top' cartItems={cartItems} />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/products/newarrivals" element={<NewArrivalsPage newProducts={newProducts} onAdd={onAdd} onRemove={onRemove} />} />
+          <Route path="/products/hiking" element={<HikingPage hikingProducts={hikingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
+          <Route path="/products/camping" element={<CampingPage campingProducts={campingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
+          <Route path="/cart" element={<ShoppingCart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
+      </Routes>  
+    </BrowserRouter>
     </div>
   );
 }
