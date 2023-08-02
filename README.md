@@ -8,4 +8,4 @@ Higher ground is a mock-up website of an outdoor related shop that sells many pr
 -HTML5
 
 ## Credits
-This project is for personal use only. I do not own any of the rights for the assets used in this project. All the image credits can be found [here](https://paulinalasko.github.io/shopping-cart-react/credits.md).
+This project is for personal use only. I do not own any of the rights for the assets used in this project. All the image credits can be found [here](https://github.com/paulinalasko/shopping-cart-react/blob/main/credits.md).
