@@ -12,7 +12,7 @@ Higher ground is a mock-up website of an outdoor related shop that sells many pr
 ## Features: 
 -Browse through products on different pages\
 -Add products to shopping cart\
--Customize quantity after adding to cart if you want to increase or decrease the amount
+-Customize quantity after adding to cart if you want to increase or decrease the amount\
 -Practice with Bootstrap styling
 
 ## Credits
