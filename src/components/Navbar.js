@@ -8,7 +8,7 @@ const NavBar = (props) => {
     <div className='nav-bar sticky-top'>
             <h1 className='logo'>higher ground</h1> 
             <NavLink className='link' exact to='/shopping-cart-react'>Home</NavLink>
-            <NavLink className='link' to='/products/newarrivals'>Products</NavLink>
+            <NavLink className='link' to='/shopping-cart-react/products/newarrivals'>Products</NavLink>
             <div className="dropdown">
                 <NavLink className='link dropdown-toggle' to='/cart'>
                 <LiaShoppingCartSolid style={{ marginRight: 5 }}/>Cart</NavLink>

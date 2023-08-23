@@ -48,11 +48,11 @@ const App = () => {
         <NavBar className='nav-bar sticky-top' cartItems={cartItems} />
         <Home />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/products/newarrivals" element={<NewArrivalsPage newProducts={newProducts} onAdd={onAdd} onRemove={onRemove} />} />
-          <Route path="/products/hiking" element={<HikingPage hikingProducts={hikingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
-          <Route path="/products/camping" element={<CampingPage campingProducts={campingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
-          <Route path="/cart" element={<ShoppingCart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
+          <Route exact path="/shopping-cart-react/" element={<Home />} />
+          <Route path="/shopping-cart-react/products/newarrivals" element={<NewArrivalsPage newProducts={newProducts} onAdd={onAdd} onRemove={onRemove} />} />
+          <Route path="/shopping-cart-react/products/hiking" element={<HikingPage hikingProducts={hikingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
+          <Route path="/shopping-cart-react/products/camping" element={<CampingPage campingProducts={campingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
+          <Route path="/shopping-cart-react/cart" element={<ShoppingCart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
       </Routes>  
     </BrowserRouter>
     </div>
