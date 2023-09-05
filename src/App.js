@@ -50,7 +50,7 @@ const App = () => {
                 <Route path="/hiking" element={<HikingPage hikingProducts={hikingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
                 <Route path="/camping" element={<CampingPage campingProducts={campingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
                 <Route path="/cart" element={<ShoppingCart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
-                <Route path="/" element={<Home />} />
+                <Route exact path="/" element={<Home />} />
             </Routes>
     </div>
   );
