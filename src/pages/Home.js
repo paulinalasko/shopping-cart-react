@@ -18,19 +18,19 @@ const Home = () => {
           <h2 className='quote'>“Live in the sunshine, swim in the sea, drink the wild air.”<br />– Ralph Waldo Emerson</h2>
           <div class="bottom-text">
               <p>LET OUR GEAR TAKE <br/>YOU THERE</p>
-              <NavLink to='/products/newarrivals'><button className='push-right scale standard-btn'>Explore</button></NavLink>
+              <NavLink to='/newarrivals'><button className='push-right scale standard-btn'>Explore</button></NavLink>
           </div>
       <div className='bottom-content'>
             <div className="image-container">
               <img className='image' src={imageOne} alt='Hikers hiking in snow' />
               <p className='image-text-one'>New Arrivals</p>
-              <NavLink to='/products/newarrivals'><button className='button-one scale standard-btn'>Shop</button></NavLink>
+              <NavLink to='/newarrivals'><button className='button-one scale standard-btn'>Shop</button></NavLink>
               <img className='image' src={imageTwo} alt='Hiker sitting overlooking alpine lake' />
               <p className='image-text-two'>Hiking Gear</p>
-              <NavLink to='/products/hiking'><button className='button-two scale standard-btn'>Shop</button></NavLink>
+              <NavLink to='/hiking'><button className='button-two scale standard-btn'>Shop</button></NavLink>
               <img className='image' src={imageThree} alt='Person admiring the view from their tent' />
               <p className='image-text-three'>Camping Gear</p>
-              <NavLink to='/products/camping'><button className='button-three scale standard-btn'>Shop</button></NavLink>
+              <NavLink to='/camping'><button className='button-three scale standard-btn'>Shop</button></NavLink>
               <img className='image' src={imageFour} alt='group of people jumping during sunset' />
               <p className='image-text-four'>Learn about our company</p>
               <button className='button-four scale standard-btn'>About us</button>
