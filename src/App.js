@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import './App.css';
 import NavBar from './components/Navbar';
 import Home from './pages/Home';
@@ -44,16 +44,14 @@ const App = () => {
   };
   return (
     <div className="App">
-      <BrowserRouter>
         <NavBar className='nav-bar sticky-top' cartItems={cartItems} />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/newarrivals" element={<NewArrivalsPage newProducts={newProducts} onAdd={onAdd} onRemove={onRemove} />} />
-          <Route path="/hiking" element={<HikingPage hikingProducts={hikingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
-          <Route path="/camping" element={<CampingPage campingProducts={campingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
-          <Route path="/cart" element={<ShoppingCart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
-      </Routes>  
-    </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/newarrivals" element={<NewArrivalsPage newProducts={newProducts} onAdd={onAdd} onRemove={onRemove} />} />
+            <Route path="/hiking" element={<HikingPage hikingProducts={hikingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
+            <Route path="/camping" element={<CampingPage campingProducts={campingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
+            <Route path="/cart" element={<ShoppingCart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
+          </Routes>
     </div>
   );
 }

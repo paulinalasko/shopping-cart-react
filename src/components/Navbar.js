@@ -7,7 +7,7 @@ const NavBar = (props) => {
     return (
     <div className='nav-bar sticky-top'>
             <h1 className='logo'>higher ground</h1> 
-            <NavLink className='link' exact to='/'>Home</NavLink>
+            <NavLink className='link' to='/'>Home</NavLink>
             <NavLink className='link' to='/newarrivals'>Products</NavLink>
             <div className="dropdown">
                 <NavLink className='link dropdown-toggle' to='/cart'>
