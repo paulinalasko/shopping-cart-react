@@ -1,4 +1,4 @@
-import { Route, Router, Switch} from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import './App.css';
 import NavBar from './components/Navbar';
 import Home from './pages/Home';
@@ -45,15 +45,13 @@ const App = () => {
   return (
     <div className="App">
         <NavBar className='nav-bar sticky-top' cartItems={cartItems} />
-          <Router>
-            <Switch>
+            <Routes>
                 <Route path="/newarrivals" element={<NewArrivalsPage newProducts={newProducts} onAdd={onAdd} onRemove={onRemove} />} />
                 <Route path="/hiking" element={<HikingPage hikingProducts={hikingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
                 <Route path="/camping" element={<CampingPage campingProducts={campingProducts} onAdd={onAdd} onRemove={onRemove}/>} />
                 <Route path="/cart" element={<ShoppingCart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
                 <Route path="/" element={<Home />} />
-            </Switch>
-          </Router>
+            </Routes>
     </div>
   );
 }
