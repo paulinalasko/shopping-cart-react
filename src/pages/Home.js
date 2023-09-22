@@ -22,17 +22,23 @@ const Home = () => {
           </div>
       <div className='bottom-content'>
             <div className="image-container">
-              <img className='image' src={imageOne} alt='Hikers hiking in snow' />
-              <p className='image-text-one'>New Arrivals</p>
-              <NavLink to='/shopping-cart-react/newarrivals'><button className='button-one scale standard-btn'>Shop</button></NavLink>
-              <img className='image' src={imageTwo} alt='Hiker sitting overlooking alpine lake' />
-              <p className='image-text-two'>Hiking Gear</p>
-              <NavLink to='/shopping-cart-react/hiking'><button className='button-two scale standard-btn'>Shop</button></NavLink>
-              <img className='image' src={imageThree} alt='Person admiring the view from their tent' />
-              <p className='image-text-three'>Camping Gear</p>
-              <NavLink to='/shopping-cart-react/camping'><button className='button-three scale standard-btn'>Shop</button></NavLink>
+              <NavLink to='/shopping-cart-react/newarrivals'>
+                <img className='image' src={imageOne} alt='Hikers hiking in snow' />
+                <p className='image-text-one'>New Arrivals</p>
+                <button className='button-one scale standard-btn'>Shop</button>
+              </NavLink>
+              <NavLink to='/shopping-cart-react/hiking'>
+                <img className='image' src={imageTwo} alt='Hiker sitting overlooking alpine lake' />
+                <p className='image-text-two'>Hiking Gear</p>
+                <button className='button-two scale standard-btn'>Shop</button>
+              </NavLink>
+              <NavLink to='/shopping-cart-react/camping'>
+                <img className='image' src={imageThree} alt='Person admiring the view from their tent' />
+                <p className='image-text-three'>Camping Gear</p>
+                <button className='button-three scale standard-btn'>Shop</button>
+            </NavLink>
               <img className='image' src={imageFour} alt='group of people jumping during sunset' />
-              <p className='image-text-four'>Learn about our company</p>
+              <p className='image-text-four'>Learn about us</p>
               <button className='button-four scale standard-btn'>About us</button>
             </div>
       </div>

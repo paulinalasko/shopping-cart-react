@@ -49,7 +49,7 @@
   display: flex;
   justify-content: flex-start;
   padding: 20px;
-  width: 100%;
+  max-width: 100%;
 }
 
 .nav-bar {
@@ -58,7 +58,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
   gap: 30px;
   padding: 12px;
   background: linear-gradient(-45deg, #ee7752, #f78ab4, #a023d5, #23bad5);
@@ -223,8 +223,8 @@
 }
 
 .bottom-hero-image {
-  width: 1000px;
-  height: 700px;
+  max-width: 1000px;
+  max-height: 700px;
   border-radius: 10px;
   filter: brightness(70%);
   position: relative;
@@ -481,4 +481,146 @@ form>input {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  .second-row {
+   background-size: 100vw;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+
+  .quote, .bottom-text {
+    font-size: 18px;
+  }
+
+  .bottom-text {
+    left: 20px;
+  }
+
+  .push-right {
+    right: -320px;
+  }
+
+  .image { 
+    width: 260px;
+    height: 170px;
+    display: flex;
+  }
+
+  .bottom-content {
+    bottom: -390px;
+  }
+
+
+  .image-container {
+    margin-top: 150px;
+    position: relative;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .image-text-one, .image-text-two,
+  .image-text-three, .image-text-four {
+    font-size: 25px;
+  }
+
+  .image-text-one, .image-text-two {
+    top: 60px;
+  }
+
+  .image-text-one {
+    left: 60px; 
+  }
+
+  .image-text-two {
+    left: 340px;
+  }
+
+  .image-text-three {
+    top: 240px;
+    left: 50px;
+  }
+
+  .image-text-four {
+    top: 240px;
+    left: 330px;
+  }
+
+  .button-one, .button-two, 
+  .button-three, .button-four {
+    display: none;
+  }
+
+  .bottom-hero-image {
+    max-width: 650px;
+    max-height: 500px;
+  }
+
+  .bottom-hero-text {
+    font-size: 30px;
+    left: 40px;
+  }
+
+  .bottom-content-two>button {
+    width: 100px;
+    left: 40px;
+    top: 310px
+  }
+
+  .footer {
+      top: 1250px;
+      left: -20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px
+  }
+
+    .product-image {
+      width: 130px;
+      height: 140px;
+    }
+  
+    .product-image-shorter {
+      width: 130px;
+      height: 100px;
+    }
+  
+    .product-image-thin {
+      width: 80px;
+      height: 150px;
+      margin-left: 60px;
+    }
+  
+    .product-image-resize {
+      width: 140px;
+      height: 80px;
+      margin-top: 60px;
+    }
+
+    .product {
+      margin-bottom: -170px;
+    }
+
+    .middle-content {
+      height: 40vh;
+    }
+
+    .product-container {
+      margin-top: 150px;
+    }
+
+    .product-header-text {
+      left: 160px;
+      top: 100px;
+    }
 }

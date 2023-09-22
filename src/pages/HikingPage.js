@@ -1,4 +1,4 @@
-import productHeader from '../images/pexels-karol-z.jpg'
+import productHeader from '../images/karol-z.jpg'
 import Product from "../components/Product";
 import SideBar from '../components/Sidebar';
 
@@ -8,7 +8,7 @@ const HikingProducts = (props) => {
   return (
     <div className="second-row" >
     <SideBar />
-    <div class="middle-content"style={{
+    <div class="middle-content hiking-content"style={{
       backgroundImage: `url(${productHeader})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover'
