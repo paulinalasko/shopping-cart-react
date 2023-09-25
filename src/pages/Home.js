@@ -44,7 +44,7 @@ const Home = () => {
       </div>
       <div className="bottom-content-two">
         <img className='bottom-hero-image' src={bottomHeroPhoto} alt='night camping near mountains' />
-        <p className="bottom-hero-text spacing-animation">Come join our backpacking <br /> expedition in Italy this summer! <br /><span className="smaller-hero-text">Volunteer on local farms | Go on stunning hikes | Learn about the local community in Italy</span> </p>
+        <p className="bottom-hero-text spacing-animation">Come join our backpacking <br /> expedition in Italy this summer! <br /><span className="smaller-hero-text">Volunteer on local farms | Go on stunning hikes | <br/> Learn about the local community in Italy</span> </p>
         <button className='scale standard-btn'>Read More</button>
       </div>
       <Footer />
